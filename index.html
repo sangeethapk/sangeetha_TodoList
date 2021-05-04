@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/distrct.css"> -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+
+<body>
+    <h2 style="text-align: center;">Login </h2><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 me-5"></div>
+               
+
+            <div class="col-lg-5">
+
+                <form action="todoPage.html" onsubmit="login()">
+                    <div class="container" id="signin">
+
+
+
+
+                        <label for="name" id="namelbl"><b>User Name</b>
+                           
+                        </label><br>
+                        <input type="text" placeholder="Enter Name" name="name" id="name" class="inputs" required>
+
+                        
+                        <label for="psw"><b>Password: </b>
+                            <small id="pswlbl"></small>
+
+                        </label>
+                        <div>
+                            <input type="password" placeholder="Enter Password" name="psw" id="psw"  class="inputs"required>
+                        </div>
+
+
+
+                        <button type="submit" class="login btn btn-success"  id="login">Login</button>
+                    </div>
+                    <span></span>
+
+
+                </form>
+
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+
+
+
+    <script src="validatelogin.js"></script>
+
+</body>
+
+</html>
