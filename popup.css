@@ -12,7 +12,8 @@
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: #94c4eb;
+    background-color: #054172;
+    color: aliceblue;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid rgb(22, 20, 20);
