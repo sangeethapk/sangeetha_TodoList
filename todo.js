@@ -61,18 +61,21 @@ function loadPromise() {
 
 function addtotable(response) {
 
-
+     let heading="<tr> <th>Tasks</th><th class=\"chk2\">Completion Status</th></tr>";
+     $("table tbody").append(heading);
+     
     for (let i = 0; i < response.length; i++) {
 
         if (response[i].completed == true) {
-            markup = "<tr><td>" + response[i].title + "</td>" + "<td> <div> <input type=\"checkbox\" class=\"chk\" checked disabled=\"disabled\"></div></td></tr>";
+            markup = "<tr><td>" + response[i].title + "</td>" + "<td class=\"chk2\"> <div> <input type=\"checkbox\" class=\"chk\" checked disabled=\"disabled\"></div></td></tr>";
 
         }
         else
-            markup = "<tr><td>" + response[i].title + "</td>" + "<td> <div> <input type=\"checkbox\" class=\"chk\" onchange=\"changeValue(this)\"> </div></td></tr>";
+            markup = "<tr><td>" + response[i].title + "</td>" + "<td class=\"chk2\"> <div> <input type=\"checkbox\" class=\"chk\" onchange=\"changeValue(this)\"> </div></td></tr>";
         tableBody = $("table tbody");
         tableBody.append(markup);
     }
+    $('.chk2').css('text-align', 'center');
 
 
 
@@ -83,6 +86,48 @@ function changeValue(element) {
     //element.value=true;
     element.disabled = true;
     count++;
-    if (count == 5)
-        alert("congrats you have finished five tasks....");
+    if (count == 5){
+
+        //alert("Congrats you have finished five tasks....");
+        
+
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+       // var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // After selecting five task
+        
+          modal.style.display = "block";
+        
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+
+    }
+        
+       
+  
 }
