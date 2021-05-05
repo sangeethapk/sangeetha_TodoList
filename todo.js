@@ -53,8 +53,8 @@ function loadPromise() {
 
 function addtotable(response) {
 
-     let heading="<tr> <th>Tasks</th><th class=\"chk2\">Completion Status</th></tr>";
-     $("table tbody").append(heading);
+     let head="<tr><th>Tasks</th><th class=\"chk2\">Completion Status</th></tr>";
+     $("table tbody").append(head);
      
     for (let i = 0; i < response.length; i++) {
 
