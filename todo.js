@@ -51,14 +51,6 @@ function loadPromise() {
     xhttp.send();
 }
 
-
-
-
-
-
-
-
-
 function addtotable(response) {
 
      let heading="<tr> <th>Tasks</th><th class=\"chk2\">Completion Status</th></tr>";
